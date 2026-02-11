@@ -9,7 +9,6 @@
     height: 100vh;
     overflow: auto;
     color: var(--white);
-    padding: 0px 40px;
     /* padding: 0 40px; */
     /* padding-top: 110px; */
 }
@@ -31,7 +30,47 @@
     gap: 2em;
 }
 
-.links a::after {}
+.links a {
+    position: relative;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    width: 100%;
+    background-color: #02D0F1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.links a:hover::after {
+    animation: slide 0.5s forwards ease-in-out;
+}
+
+.links a:not(:hover)::after {
+    animation: notSlide 0.5s forwards ease-in-out;
+}
+
+@keyframes slide {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes notSlide {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
 
 .links span {
     color: #02D0F1;
@@ -42,10 +81,24 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-image: url('./assets/imageBack.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.849);
 }
 
 .heroContent {
-    padding: 150px 0;
+    padding: 150px 40px;
     position: relative;
     z-index: 3;
 }
