@@ -1,14 +1,44 @@
 .sideMenu{
-    display: none;
-    width: 60%;
+    width: 500px;
     height: 100vh;
-    background-color: #f1f1f1;
-    position: fixed;
+    background: #f1f1f1;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 1000;
     padding: 20px;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
+    
+}
+
+.sideMenu.active {
+    transform: translateX(0);
+}
+
+
+/* Overlay quando menu está aberto */
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .sideMenu {
+        width: 100%;
+        max-width: 280px;
+    }
 }

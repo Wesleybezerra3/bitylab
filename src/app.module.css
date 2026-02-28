@@ -1,6 +1,8 @@
 .container {
     width: 100%;
     height: 100vh;
+    position: relative;
+    overflow: auto;
 }
 
 .content {
@@ -12,7 +14,10 @@
     /* padding: 0 40px; */
     /* padding-top: 110px; */
 }
-
+.logo {
+    width: 100px;
+    height: auto;}
+    
 .header {
     position: fixed;
     width: 100%;
@@ -22,12 +27,8 @@
     justify-content: space-between;
     gap: 2em;
     padding: 20px 40px;
-    z-index: 1000;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(0, 0, 0, 0.2) 100%
-    );
+    z-index: 999;
+   background-color: #16213e;
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(2, 208, 241, 0.15);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -42,15 +43,19 @@
     color: #f1f1f1;
 
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .menuButton{
         display: flex;
     }
-    .links{
+   .links{
         display: none;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
     }
     .links a{
         display: none;
+        pointer-events: none;
     }
   }
 
@@ -227,56 +232,24 @@
 }
 
 
-.menu a {
-    color: var(--white);
-    text-decoration: none;
-    font-family: 'Poppins';
-    font-size: 1.1em;
-}
-
 /* Estilos para a seção Sobre */
 .aboutus {
+
   background: #f1f1f1;
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite, fadeInSection 1s ease-out forwards;
   padding: 80px 20px;
   position: relative;
-  overflow: hidden;
   transition: all 1s ease-in-out;
 }
 
-.aboutus::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(255, 87, 34, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
-}
-
-.aboutus::after {
-  content: '';
-  position: absolute;
-  bottom: -30%;
-  left: -5%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(0, 123, 255, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite reverse;
-}
 
 .aboutusContainer {
   width: 80%;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
 }
 
-.sectionTitle {
+.sectionTitleAbout {
+  margin-top: 1.2em;
   font-size: 3rem;
   /* margin-bottom: 5px; */
   color: #00a8cc;
@@ -285,9 +258,10 @@
   animation: fadeInDown 0.8s ease-out;
 }
 
-.sectionDescription {
+
+.sectionDescriptionAbout {
   font-size: 1.3rem;
-  color:#00a8cc;
+  color: #1a1a2e;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin-bottom: 50px;
@@ -332,6 +306,25 @@
   backdrop-filter: blur(10px);
   animation: scaleIn 1s ease-out backwards;
   cursor: pointer;
+}
+.sectionTitleServices {
+  margin-top: 1.2em;
+  font-size: 3rem;
+  /* margin-bottom: 5px; */
+  color: #00a8cc;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+
+.sectionDescriptionServices {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .serviceCard:nth-child(1) {
@@ -523,11 +516,13 @@
 .serviceCardLarge h3 {
   font-size: 1.5rem;
   color: #fff;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 15px;
 }
 
 .serviceCardLarge p {
   font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
   color: #b0b0b0;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -541,6 +536,7 @@
   border: none;
   border-radius: 25px;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -608,10 +604,11 @@
 
 /* RESPONSIVO - Móveis Médios (768px e abaixo) */
 @media (max-width: 768px) {
-  .menu {
+  .header {
     padding: 15px 20px;
     height: 60px;
   }
+  
 
   .links {
     gap: 1em;
@@ -714,12 +711,16 @@
   .container {
     height: auto;
   }
+  .logo{
+
+    width: 80px;
+  }
 
   .content {
     height: auto;
   }
 
-  .menu {
+  .header {
     padding: 12px 15px;
     height: 50px;
     gap: 1em;
@@ -735,7 +736,7 @@
   }
 
   .hero {
-    height: 80vh;
+    height: 100vh;
   }
 
   .heroTitle {
