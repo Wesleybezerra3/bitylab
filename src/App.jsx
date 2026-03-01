@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import style from "./app.module.css";
 import logo from "../src/assets/logoex.svg";
+import whatsapp from "../src/assets/Whatsapp.svg";
+import instagram from "../src/assets/Instagram.svg";
+
+
 import videoback from "./assets/video.mp4";
-import { MenuIcon } from "lucide-react";
+import { Instagram, MenuIcon } from "lucide-react";
 import ButtonUp from "./components/ButtonUp";
 import SideMenu from "./components/SideMenu";
 
@@ -18,7 +22,7 @@ function App() {
     <>
       <main className={style.container} >
         <ButtonUp/>
-        <SideMenu isOpen={isMenuOpen}/>
+        <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}/>
         <header className={style.header}>
           <img src={logo} alt="" className={style.logo} />
             <button className={style.menuButton} onClick={()=>{
@@ -34,15 +38,15 @@ function App() {
               {" "}
               <span>02.</span> O que construimos
             </a>
-            <a href="">
+            <a href="#projects">
               {" "}
               <span>03.</span> Projetos
             </a>
-            <a href="">
+            <a href="#testimonials">
               {" "}
               <span>04.</span> Depoimentos
             </a>
-            <a href="">
+            <a href="#contact">
               {" "}
               <span>05.</span> Contato
             </a>
@@ -92,6 +96,7 @@ function App() {
             </div>
           </section>
 
+
           <section className={style.services}>
             <div className={style.servicesContainer}>
               <h2 className={style.sectionTitleServices}>Nossos Serviços</h2>
@@ -128,7 +133,243 @@ function App() {
               </div>
             </div>
           </section>
+
+          <section className={style.projects} id="projects">
+            <div className={style.projectsContainer}>
+              <h2 className={style.sectionTitleProjects}>Nossos Projetos</h2>
+              <p className={style.sectionDescriptionProjects}>Confira alguns dos trabalhos que realizamos para nossos clientes</p>
+              
+              <div className={style.projectsGrid}>
+                <div className={style.projectCard}>
+                  <div className={style.projectImage}>
+                    <div className={style.projectImagePlaceholder}>🌐</div>
+                  </div>
+                  <div className={style.projectContent}>
+                    <h3>E-commerce Moderno</h3>
+                    <p>Plataforma de vendas online com integração de pagamento e gestão de inventário.</p>
+                    <div className={style.projectTags}>
+                      <span className={style.tag}>React</span>
+                      <span className={style.tag}>Node.js</span>
+                      <span className={style.tag}>MongoDB</span>
+                    </div>
+                    <a href="https://wa.me/5581985973850?text=Olá%0AGostaria%20de%20saber%20mais%20sobre%20este%20projeto" target="_blank" className={style.ctaButtonSmall}>Ver Caso</a>
+                  </div>
+                </div>
+
+                <div className={style.projectCard}>
+                  <div className={style.projectImage}>
+                    <div className={style.projectImagePlaceholder}>📱</div>
+                  </div>
+                  <div className={style.projectContent}>
+                    <h3>App de Produtividade</h3>
+                    <p>Aplicação web para gerenciamento de tarefas com colaboração em tempo real.</p>
+                    <div className={style.projectTags}>
+                      <span className={style.tag}>React</span>
+                      <span className={style.tag}>Firebase</span>
+                      <span className={style.tag}>Tailwind</span>
+                    </div>
+                    <a href="https://wa.me/5581985973850?text=Olá%0AGostaria%20de%20saber%20mais%20sobre%20este%20projeto" target="_blank" className={style.ctaButtonSmall}>Ver Caso</a>
+                  </div>
+                </div>
+
+                <div className={style.projectCard}>
+                  <div className={style.projectImage}>
+                    <div className={style.projectImagePlaceholder}>🎯</div>
+                  </div>
+                  <div className={style.projectContent}>
+                    <h3>Dashboard Executivo</h3>
+                    <p>Sistema de análise de dados com visualizações interativas e relatórios customizados.</p>
+                    <div className={style.projectTags}>
+                      <span className={style.tag}>Vue.js</span>
+                      <span className={style.tag}>Python</span>
+                      <span className={style.tag}>PostgreSQL</span>
+                    </div>
+                    <a href="https://wa.me/5581985973850?text=Olá%0AGostaria%20de%20saber%20mais%20sobre%20este%20projeto" target="_blank" className={style.ctaButtonSmall}>Ver Caso</a>
+                  </div>
+                </div>
+
+                <div className={style.projectCard}>
+                  <div className={style.projectImage}>
+                    <div className={style.projectImagePlaceholder}>🚀</div>
+                  </div>
+                  <div className={style.projectContent}>
+                    <h3>Plataforma de Educação</h3>
+                    <p>LMS completo com cursos, avaliações e gamificação para melhor engajamento.</p>
+                    <div className={style.projectTags}>
+                      <span className={style.tag}>Next.js</span>
+                      <span className={style.tag}>GraphQL</span>
+                      <span className={style.tag}>AWS</span>
+                    </div>
+                    <a href="https://wa.me/5581985973850?text=Olá%0AGostaria%20de%20saber%20mais%20sobre%20este%20projeto" target="_blank" className={style.ctaButtonSmall}>Ver Caso</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className={style.testimonials} id="testimonials">
+            <div className={style.testimonialsContainer}>
+              <h2 className={style.sectionTitleTestimonials}>O Que Nossos Clientes Dizem</h2>
+              <p className={style.sectionDescriptionTestimonials}>Histórias de sucesso de quem confiou em nossos serviços</p>
+              
+              <div className={style.testimonialsGrid}>
+                <div className={style.testimonialCard}>
+                  <div className={style.testimonialRating}>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                  </div>
+                  <p className={style.testimonialText}>"A Bitylab transformou completamente nossa presença online. O site ficou moderno, rápido e nossas vendas aumentaram 300% em três meses!"</p>
+                  <div className={style.testimonialAuthor}>
+                    <div className={style.authorAvatar}>👨‍💼</div>
+                    <div className={style.authorInfo}>
+                      <h4>Carlos Silva</h4>
+                      <p>CEO, Empresa XYZ</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={style.testimonialCard}>
+                  <div className={style.testimonialRating}>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                  </div>
+                  <p className={style.testimonialText}>"Profissionais incríveis! Superaram minhas expectativas com o sistema de gestão. O suporte é impecável e sempre disponível."</p>
+                  <div className={style.testimonialAuthor}>
+                    <div className={style.authorAvatar}>👩‍💼</div>
+                    <div className={style.authorInfo}>
+                      <h4>Marina Costa</h4>
+                      <p>Diretora Financeira, Tech Solutions</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={style.testimonialCard}>
+                  <div className={style.testimonialRating}>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                  </div>
+                  <p className={style.testimonialText}>"Do primeiro contato até a entrega, tudo foi perfeito. Entregaram antes do prazo e os resultados superaram o esperado. Recomendo!"</p>
+                  <div className={style.testimonialAuthor}>
+                    <div className={style.authorAvatar}>👨‍🎓</div>
+                    <div className={style.authorInfo}>
+                      <h4>João Oliveira</h4>
+                      <p>Founder, StartupAI</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={style.testimonialCard}>
+                  <div className={style.testimonialRating}>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                    <span>⭐</span>
+                  </div>
+                  <p className={style.testimonialText}>"A equipe é muito atenciosa e entende perfeitamente o que você precisa. Nossa landing page converteu mais leads que planejávamos!"</p>
+                  <div className={style.testimonialAuthor}>
+                    <div className={style.authorAvatar}>👩‍🔬</div>
+                    <div className={style.authorInfo}>
+                      <h4>Fernanda Martins</h4>
+                      <p>Marketing Manager, Inovação +</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className={style.contact} id="contact">
+            <div className={style.contactContainer}>
+              <h2 className={style.sectionTitleContact}>Vamos Trabalhar Juntos!</h2>
+              <p className={style.sectionDescriptionContact}>Tem um projeto em mente? Entre em contato conosco e vamos transformar suas ideias em realidade.</p>
+              
+              <div className={style.contactContent}>
+                <div className={style.infoCard}>
+                  <div className={style.infoIcon}>📞</div>
+                  <h3>Telefone</h3>
+                  <p><a href="tel:+5581985973850">(81) 9 8597-3850</a></p>
+                </div>
+
+                <div className={style.infoCard}>
+                  <div className={style.infoIcon}>📧</div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:contato@bitylab.com">contato@bitylab.com</a></p>
+                </div>
+              </div>
+
+              <div className={style.socialLinksContact}>
+                <h4>Acompanhe-nos</h4>
+                <div className={style.socialButtonsContact}>
+                  <a href="https://wa.me/5581985973850" target="_blank" rel="noopener noreferrer" className={style.socialButtonContact}>WhatsApp</a>
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={style.socialButtonContact}>Instagram</a>
+                </div>
+              </div>
+            </div>
+          </section>
+           <footer className={style.footer}>
+          <div className={style.footerContent}>
+            <div className={style.footerSection}>
+              <div className={style.footerBrand}>
+                <div>
+                  <img src={logo} alt="Bitylab Logo" className={style.footerLogo} />
+                </div>
+                <p>Transformando ideias em soluções web inovadoras para negócios que querem crescer.</p>
+              </div>
+            </div>
+
+            <div className={style.footerSection}>
+              <h4>Navegação</h4>
+              <ul className={style.footerLinks}>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#aboutus">Sobre Nós</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#projects">Projetos</a></li>
+              </ul>
+            </div>
+
+            <div className={style.footerSection}>
+              <h4>Mais</h4>
+              <ul className={style.footerLinks}>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#contact">Contato</a></li>
+              </ul>
+            </div>
+
+            <div className={style.footerSection}>
+              <h4>Siga-nos</h4>
+              <div className={style.footerSocial}>
+                <a href="https://wa.me/5581985973850" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
+                  <img src={whatsapp} alt="WhatsApp" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
+                  <img src={instagram} alt="Instagram" />
+                </a>
+                {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
+                  <span>💼</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
+                  <span>🔧</span>
+                </a> */}
+              </div>
+            </div>
+          </div>
+
+          <div className={style.footerBottom}>
+            <p>&copy; 2026 Bitylab. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <span>❤️</span> por Bitylab</p>
+          </div>
+        </footer>
         </section>
+
       </main>
     </>
   );

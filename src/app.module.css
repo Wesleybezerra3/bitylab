@@ -574,6 +574,280 @@
   }
 }
 
+/* Estilos para a seção Projetos */
+.projects {
+  background: #f1f1f1;
+  padding: 80px 20px;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.projectsContainer {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sectionTitleProjects {
+  margin-top: 1.2em;
+  font-size: 3rem;
+  color: #00a8cc;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.sectionDescriptionProjects {
+  font-size: 1.3rem;
+  color: #1a1a2e;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.projectCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out backwards;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projectCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.projectCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.projectCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.projectCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 168, 204, 0.2);
+}
+
+.projectImage {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #00a8cc 0%, #00d4ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.projectImagePlaceholder {
+  font-size: 4rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.projectContent {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectCard h3 {
+  font-size: 1.3rem;
+  color: #1a1a2e;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.projectCard p {
+  font-size: 0.95rem;
+  color: #666;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: rgba(0, 168, 204, 0.1);
+  color: #00a8cc;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  border: 1px solid rgba(0, 168, 204, 0.3);
+}
+
+.projectCard .ctaButtonSmall {
+  align-self: flex-start;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVO - Tablets */
+@media (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .sectionTitleProjects {
+    font-size: 2.5rem;
+  }
+
+  .projectImage {
+    height: 180px;
+  }
+
+  .projectImagePlaceholder {
+    font-size: 3rem;
+  }
+}
+
+/* RESPONSIVO - Tablets Médios (768px) */
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 20px;
+  }
+
+  .projectsContainer {
+    width: 90%;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sectionTitleProjects {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .sectionDescriptionProjects {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .projectImage {
+    height: 150px;
+  }
+
+  .projectImagePlaceholder {
+    font-size: 2.5rem;
+  }
+
+  .projectContent {
+    padding: 20px;
+  }
+
+  .projectCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .projectCard p {
+    font-size: 0.9rem;
+  }
+}
+
+/* RESPONSIVO - Móveis (480px) */
+@media (max-width: 480px) {
+  .projects {
+    padding: 40px 15px;
+  }
+
+  .projectsContainer {
+    width: 100%;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitleProjects {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .sectionDescriptionProjects {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .projectImage {
+    height: 120px;
+  }
+
+  .projectImagePlaceholder {
+    font-size: 2rem;
+  }
+
+  .projectContent {
+    padding: 15px;
+  }
+
+  .projectCard h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .projectCard p {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  .projectTags {
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+
+  .ctaButtonSmall {
+    padding: 7px 18px;
+    font-size: 0.85rem;
+  }
+}
+
 /* RESPONSIVO - Tablets e Dispositivos Médios */
 @media (max-width: 1024px) {
   .heroTitle {
@@ -837,5 +1111,818 @@
   .ctaButtonSmall {
     padding: 7px 18px;
     font-size: 0.85rem;
+  }
+}
+
+/* Estilos para a seção Depoimentos */
+.testimonials {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(2, 208, 241, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(2, 208, 241, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite reverse;
+  z-index: 0;
+}
+
+.testimonialsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitleTestimonials {
+  font-size: 3rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  animation: fadeInDown 0.8s ease-out;
+  margin-bottom: 15px;
+}
+
+.sectionDescriptionTestimonials {
+  font-size: 1.3rem;
+  color: #b0b0b0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.testimonialCard {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(2, 208, 241, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease-out backwards;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.testimonialCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.testimonialCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.testimonialCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.testimonialCard:hover {
+  background: rgba(2, 208, 241, 0.15);
+  border-color: #02D0F1;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(2, 208, 241, 0.25);
+}
+
+.testimonialRating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.testimonialText {
+  font-size: 1rem;
+  color: #e0e0e0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.authorAvatar {
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 208, 241, 0.2);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.authorInfo h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.authorInfo p {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  font-family: 'Montserrat', sans-serif;
+  margin: 5px 0 0 0;
+}
+
+/* RESPONSIVO - Tablets */
+@media (max-width: 1024px) {
+  .testimonialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .sectionTitleTestimonials {
+    font-size: 2.5rem;
+  }
+}
+
+/* RESPONSIVO - Tablets Médios (768px) */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 60px 20px;
+  }
+
+  .testimonialsContainer {
+    padding: 0;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitleTestimonials {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .sectionDescriptionTestimonials {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .testimonialCard {
+    padding: 25px;
+  }
+
+  .testimonialText {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .authorAvatar {
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .authorInfo h4 {
+    font-size: 1rem;
+  }
+
+  .authorInfo p {
+    font-size: 0.8rem;
+  }
+}
+
+/* RESPONSIVO - Móveis (480px) */
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 40px 15px;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .sectionTitleTestimonials {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .sectionDescriptionTestimonials {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .testimonialCard {
+    padding: 20px;
+  }
+
+  .testimonialRating {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .testimonialText {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  .authorAvatar {
+    font-size: 1.8rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .authorInfo h4 {
+    font-size: 0.95rem;
+  }
+
+  .authorInfo p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Estilos para a seção Contato */
+.contact {
+  background: #f1f1f1;
+  padding: 80px 20px;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.contactContainer {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sectionTitleContact {
+  font-size: 3rem;
+  color: #00a8cc;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  animation: fadeInDown 0.8s ease-out;
+  margin-top: 1.2em;
+  margin-bottom: 15px;
+}
+
+.sectionDescriptionContact {
+  font-size: 1.3rem;
+  color: #1a1a2e;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  animation: fadeInUp 0.8s ease-out;
+  margin-bottom: 50px;
+}
+
+.contactInfo {
+  display: none;
+}
+
+.socialLinksContact {
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.socialLinksContact h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #00a8cc;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.socialButtonsContact {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.socialButtonContact {
+  background: linear-gradient(135deg, #00a8cc 0%, #02D0F1 100%);
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 204, 0.3);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.socialButtonContact:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 168, 204, 0.4);
+}
+
+.infoCard {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 168, 204, 0.15);
+}
+
+.infoIcon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.infoCard h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.infoCard p {
+  font-family: 'Montserrat', sans-serif;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.infoCard a {
+  color: #00a8cc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.infoCard a:hover {
+  color: #02D0F1;
+}
+
+.socialLinks {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socialLink {
+  background: #f1f1f1;
+  color: #00a8cc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+}
+
+.socialLink:hover {
+  background: #00a8cc;
+  color: white;
+  border-color: #00a8cc;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVO - Tablets */
+@media (max-width: 1024px) {
+  .contactContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .sectionTitleContact {
+    font-size: 2.5rem;
+  }
+}
+
+/* RESPONSIVO - Tablets Médios (768px) */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contactContainer {
+    width: 90%;
+  }
+
+  .contactContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .sectionTitleContact {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .sectionDescriptionContact {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .infoCard {
+    padding: 20px;
+  }
+
+  .infoIcon {
+    font-size: 2rem;
+  }
+
+  .infoCard h3 {
+    font-size: 1rem;
+  }
+
+  .infoCard p {
+    font-size: 0.9rem;
+  }
+
+  .socialLinksContact h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .socialButtonContact {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* RESPONSIVO - Móveis (480px) */
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contactContainer {
+    width: 100%;
+  }
+
+  .contactContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitleContact {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .sectionDescriptionContact {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .infoCard {
+    padding: 18px;
+  }
+
+  .infoIcon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .infoCard h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .infoCard p {
+    font-size: 0.85rem;
+  }
+
+  .socialLinksContact h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .socialButtonsContact {
+    gap: 10px;
+  }
+
+  .socialButtonContact {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Estilos para o Footer */
+.footer {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+  color: #fff;
+  padding: 60px 20px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(2, 208, 241, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.footerSection {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.footerSection:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.footerSection:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.footerSection:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.footerSection:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.footerBrand h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: #02D0F1;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.footerBrand p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.footerSection h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 18px;
+  margin-top: 0;
+  border-bottom: 2px solid #02D0F1;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 12px;
+}
+
+.footerLinks a {
+  font-family: 'Montserrat', sans-serif;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #02D0F1;
+  transform: translateX(5px);
+}
+
+.footerSocial {
+  display: flex;
+
+  gap: 15px;
+}
+.footerLogo{
+  width: 100px;
+}
+
+.socialIcon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(2, 208, 241, 0.15);
+  border: 1px solid rgba(2, 208, 241, 0.3);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  background: #02D0F1;
+  border-color: #02D0F1;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(2, 208, 241, 0.3);
+}
+.socialIcon img{
+  width: 30px;
+  height: 30px;
+}
+
+.footerBottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid rgba(2, 208, 241, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footerBottom p {
+  font-family: 'Montserrat', sans-serif;
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footerBottom span {
+  color: #02D0F1;
+}
+
+/* RESPONSIVO - Tablets */
+@media (max-width: 1024px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* RESPONSIVO - Tablets Médios (768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
+  }
+
+  .footerSection h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .footerLinks a {
+    font-size: 0.9rem;
+  }
+
+  .footerBrand h3 {
+    font-size: 1.5rem;
+  }
+
+  .footerBrand p {
+    font-size: 0.9rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .footerBottom p {
+    font-size: 0.85rem;
+  }
+}
+
+/* RESPONSIVO - Móveis (480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px 20px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footerSection h4 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .footerBrand h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .footerBrand p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  .footerLinks li {
+    margin-bottom: 10px;
+  }
+
+  .footerLinks a {
+    font-size: 0.85rem;
+  }
+
+  .footerSocial {
+    gap: 12px;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  .footerBottom p {
+    font-size: 0.8rem;
   }
 }
