@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./app.module.css";
 import logo from "../src/assets/logoex.svg";
-import whatsapp from "../src/assets/Whatsapp.svg";
+import whatsapp from "../src/assets/WhatsApp.svg";
 import instagram from "../src/assets/Instagram.svg";
 
 
