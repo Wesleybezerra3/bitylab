@@ -38,17 +38,17 @@ function App() {
               {" "}
               <span>02.</span> O que construimos
             </a>
-            <a href="#projects">
+            {/* <a href="#projects">
               {" "}
               <span>03.</span> Projetos
-            </a>
-            <a href="#testimonials">
+            </a> */}
+            {/* <a href="#testimonials">
               {" "}
               <span>04.</span> Depoimentos
-            </a>
+            </a> */}
             <a href="#contact">
               {" "}
-              <span>05.</span> Contato
+              <span>03.</span> Contato
             </a>
           </div>
         </header>
@@ -58,7 +58,7 @@ function App() {
             <div className={style.heroContent}>
               <h1 className={style.heroTitle}>Desenvolvimento Web Sob Medida</h1>
               <p className={style.heroSubtitle}>Para negócios que querem crescer.</p>
-              <a href="#" className={style.ctaButton}>Saiba Mais</a>
+              <a href="https://wa.me/5581985973850" className={style.ctaButton} target="_blank" rel="noopener noreferrer">Saiba Mais</a>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ function App() {
               
               <div className={style.aboutusContent}>
                 <div className={style.aboutusText}>
-                  <p>Somos uma equipe apaixonada por tecnologia e design, dedicada a criar soluções web personalizadas que elevam seus negócios.</p>
+                  <p>A BityLab nasceu com o propósito de desenvolver sites, landing pages e sistemas web sob medida, criados por especialistas apaixonados por tecnologia. Nosso foco é ajudar pequenos negócios a vender mais, fortalecer sua presença digital e se posicionar de forma profissional no mercado.</p>
                   <p>Com uma abordagem consultiva, entendemos profundamente os desafios do seu negócio e entregamos soluções que geram resultados reais.</p>
                 </div>
                 
@@ -134,7 +134,7 @@ function App() {
             </div>
           </section>
 
-          <section className={style.projects} id="projects">
+          {/* <section className={style.projects} id="projects">
             <div className={style.projectsContainer}>
               <h2 className={style.sectionTitleProjects}>Nossos Projetos</h2>
               <p className={style.sectionDescriptionProjects}>Confira alguns dos trabalhos que realizamos para nossos clientes</p>
@@ -205,8 +205,8 @@ function App() {
                 </div>
               </div>
             </div>
-          </section>
-          <section className={style.testimonials} id="testimonials">
+          </section> */}
+          {/* <section className={style.testimonials} id="testimonials">
             <div className={style.testimonialsContainer}>
               <h2 className={style.sectionTitleTestimonials}>O Que Nossos Clientes Dizem</h2>
               <p className={style.sectionDescriptionTestimonials}>Histórias de sucesso de quem confiou em nossos serviços</p>
@@ -285,7 +285,7 @@ function App() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className={style.contact} id="contact">
             <div className={style.contactContainer}>
@@ -310,7 +310,7 @@ function App() {
                 <h4>Acompanhe-nos</h4>
                 <div className={style.socialButtonsContact}>
                   <a href="https://wa.me/5581985973850" target="_blank" rel="noopener noreferrer" className={style.socialButtonContact}>WhatsApp</a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={style.socialButtonContact}>Instagram</a>
+                  <a href="https://instagram.com/bitylab" target="_blank" rel="noopener noreferrer" className={style.socialButtonContact}>Instagram</a>
                 </div>
               </div>
             </div>
@@ -332,25 +332,25 @@ function App() {
                 <li><a href="#hero">Início</a></li>
                 <li><a href="#aboutus">Sobre Nós</a></li>
                 <li><a href="#services">Serviços</a></li>
-                <li><a href="#projects">Projetos</a></li>
+                {/* <li><a href="#projects">Projetos</a></li> */}
               </ul>
             </div>
 
             <div className={style.footerSection}>
               <h4>Mais</h4>
               <ul className={style.footerLinks}>
-                <li><a href="#testimonials">Depoimentos</a></li>
+                {/* <li><a href="#testimonials">Depoimentos</a></li> */}
                 <li><a href="#contact">Contato</a></li>
               </ul>
             </div>
 
             <div className={style.footerSection}>
-              <h4>Siga-nos</h4>
+              <h4>Contatos</h4>
               <div className={style.footerSocial}>
                 <a href="https://wa.me/5581985973850" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
                   <img src={whatsapp} alt="WhatsApp" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
+                <a href="https://www.instagram.com/bitylab" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>
                   <img src={instagram} alt="Instagram" />
                 </a>
                 {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={style.socialIcon}>

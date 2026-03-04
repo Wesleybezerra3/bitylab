@@ -27,14 +27,14 @@ export default function SideMenu({ isOpen, onClose }) {
           <a href="#services" onClick={handleLinkClick} className={style.menuLink}>
             <span>02.</span> O que construímos
           </a>
-          <a href="#projects" onClick={handleLinkClick} className={style.menuLink}>
+          {/* <a href="#projects" onClick={handleLinkClick} className={style.menuLink}>
             <span>03.</span> Projetos
-          </a>
-          <a href="#testimonials" onClick={handleLinkClick} className={style.menuLink}>
+          </a> */}
+          {/* <a href="#testimonials" onClick={handleLinkClick} className={style.menuLink}>
             <span>04.</span> Depoimentos
-          </a>
+          </a> */}
           <a href="#contact" onClick={handleLinkClick} className={style.menuLink}>
-            <span>05.</span> Contato
+            <span>03.</span> Contato
           </a>
         </nav>
       </div>
